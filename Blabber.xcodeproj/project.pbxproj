@@ -14,6 +14,7 @@
 		7CF7B654282D518B0003632C /* BlabberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7B653282D518B0003632C /* BlabberTests.swift */; };
 		7CF7B65E282D518B0003632C /* BlabberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7B65D282D518B0003632C /* BlabberUITests.swift */; };
 		7CF7B660282D518B0003632C /* BlabberUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7B65F282D518B0003632C /* BlabberUITestsLaunchTests.swift */; };
+		7CF7B66D282D51A70003632C /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7B66C282D51A70003632C /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		7CF7B659282D518B0003632C /* BlabberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlabberUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CF7B65D282D518B0003632C /* BlabberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlabberUITests.swift; sourceTree = "<group>"; };
 		7CF7B65F282D518B0003632C /* BlabberUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlabberUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7CF7B66C282D51A70003632C /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				7CF7B641282D51890003632C /* BlabberApp.swift */,
 				7CF7B643282D51890003632C /* ContentView.swift */,
+				7CF7B66C282D51A70003632C /* WebView.swift */,
 				7CF7B645282D518A0003632C /* Assets.xcassets */,
 				7CF7B64A282D518A0003632C /* Blabber.entitlements */,
 				7CF7B647282D518A0003632C /* Preview Content */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CF7B66D282D51A70003632C /* WebView.swift in Sources */,
 				7CF7B644282D51890003632C /* ContentView.swift in Sources */,
 				7CF7B642282D51890003632C /* BlabberApp.swift in Sources */,
 			);
