@@ -10,9 +10,10 @@ import WebKit
 import Combine
 
 class WebViewData: ObservableObject {
-  @Published var loading: Bool = false
-  @Published var url: URL?;
   
+  @Published var loading: Bool = false
+  @Published var url: URL?
+
   init (url: URL) {
     self.url = url
   }
@@ -20,18 +21,18 @@ class WebViewData: ObservableObject {
 
 struct WebView: NSViewRepresentable {
   @ObservedObject var data: WebViewData
-  
+
   var webView: WKWebView = WKWebView()
-  
+
   func makeNSView(context: Context) -> WKWebView {
     return context.coordinator.webView
   }
-  
+
   func updateNSView(_ nsView: WKWebView, context: Context) {
-    
+
     guard context.coordinator.loadedUrl != data.url else { return }
     context.coordinator.loadedUrl = data.url
-    
+
     if let url = data.url {
       DispatchQueue.main.async {
         let request = URLRequest(url: url)
@@ -40,7 +41,7 @@ struct WebView: NSViewRepresentable {
     }
     context.coordinator.data.url = data.url
   }
-  
+
   func makeCoordinator() -> WebViewCoordinator {
     return WebViewCoordinator(data: data)
   }
@@ -48,55 +49,58 @@ struct WebView: NSViewRepresentable {
 
 @available(OSX 11.0, *)
 class WebViewCoordinator: NSObject, WKNavigationDelegate {
-  @ObservedObject var data: WebViewData
   
+  @ObservedObject var data: WebViewData
+
   var webView: WKWebView = WKWebView()
   var loadedUrl: URL? = nil
   var loadedNav: String? = nil
-  
+
   init(data: WebViewData) {
     self.data = data
     super.init()
     webView.navigationDelegate = self
+    webView.customUserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_5_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6 Safari/605.1.15"
   }
-  
-  // document.querySelector(".mainContent-20q_Hp").click();
-  
+
   func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+
     let js = """
               document.querySelector(".wrapper-1_HaEi").style.display = 'none';
               document.querySelector(".sidebar-1tnWFu").style.display = 'none';
              """
-    
+
     webView.evaluateJavaScript(js, completionHandler: nil)
+
     DispatchQueue.main.async {
       self.data.loading = false
     }
+
   }
-  
+
   func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
     DispatchQueue.main.async { self.data.loading = true }
   }
-  
+
   func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
     showError(title: "Navigation Error", message: error.localizedDescription)
     DispatchQueue.main.async { self.data.loading = false }
   }
-  
+
   func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
     showError(title: "Loading Error", message: error.localizedDescription)
     DispatchQueue.main.async { self.data.loading = false }
   }
-  
-  
+
+
   func showError(title: String, message: String) {
 #if os(macOS)
     let alert: NSAlert = NSAlert()
-    
+
     alert.messageText = title
     alert.informativeText = message
     alert.alertStyle = .warning
-    
+
     alert.runModal()
 #else
     print("\(title): \(message)")

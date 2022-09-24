@@ -5,22 +5,8 @@
 //  Created by Timothy Kaechle on 5/12/22.
 //
 
-//func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-//  let webPageDefaultPrefs = WKWebpagePreferences()
-//  webPageDefaultPrefs.allowsContentJavaScript = true
-
-//  webView.evaluateJavaScript("document.querySelector(\".wrapper-1_HaEi\").style.display = 'none'; document.querySelector(\".sidebar-1tnWFu\").style.display = 'none';", completionHandler: nil)
-//}
-
-// const channels = document.querySelector("Channels")
-//
-// data-dnd-name="*"
-
 import SwiftUI
 import WebKit
-
-// document.querySelector(".mainContent-20q_Hp").click()
-//
 
 struct ContentView: View {
   var body: some View {
@@ -36,12 +22,12 @@ struct ContentView: View {
 }
 
 struct NavigationList: View {
-  
-  var home: URL? = URL(string: "https://discord.com/channels/419336996117282816/419336996117282818")
+  var home: URL? = URL(string: "https://slack.com/workspace-signin")
+
   var hardwareWordle: String = """
                                document.querySelector(".mainContent-20q_Hp").click();
                                """
-  
+
   var body: some View {
     List {
       Section(header: Text("the og").font(Font.system(.body).smallCaps())) {
@@ -56,7 +42,7 @@ struct NavigationList: View {
         NavigationLink(destination: WebView(data: WebViewData(url: home!))) {
           Label("wordle", systemImage: "number")
         }
-        
+
         Label("stonks", systemImage: "number")
         Label("kryptonight", systemImage: "number")
         Label("shitposting", systemImage: "number")
@@ -66,7 +52,7 @@ struct NavigationList: View {
         Label("gamecave", systemImage: "speaker.wave.3")
         Label("exchange-support", systemImage: "speaker.wave.3")
       }
-    }.frame(width: 190)
+    }.frame(width: 150)
   }
 }
 
@@ -74,7 +60,7 @@ struct NavigationList: View {
 // Web View
 
 struct MainPanel: View {
-  var home: URL? = URL(string: "https://discord.com/channels/419336996117282816/419336996117282818")
+  var home: URL? = URL(string: "https://slack.com/workspace-signin")
   var body: some View {
     WebView(data: WebViewData(url: self.home!))
   }
@@ -82,10 +68,10 @@ struct MainPanel: View {
 
 // Preview Provider
 
-//struct CircleImage_Previews: PreviewProvider {
-//  static var previews: some View {
-//    Group {
-//      ContentView()
-//    }
-//  }
-//}
+struct CircleImage_Previews: PreviewProvider {
+  static var previews: some View {
+    Group {
+      ContentView()
+    }
+  }
+}

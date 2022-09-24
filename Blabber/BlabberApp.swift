@@ -16,7 +16,6 @@ struct BlabberApp: App {
           SidebarCommands() // 1
         }
     }
-
 }
 
 
