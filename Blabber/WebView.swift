@@ -1,16 +1,11 @@
-//
-//  WebView.swift
-//  Blabber
-//
-//  Created by Timothy Kaechle on 5/12/22.
-//
+// WebView.swift
+// Created by Tim Kaechle on 5/12/22.
 
 import SwiftUI
 import WebKit
 import Combine
 
 class WebViewData: ObservableObject {
-  
   @Published var loading: Bool = false
   @Published var url: URL?
 
@@ -29,17 +24,17 @@ struct WebView: NSViewRepresentable {
   }
 
   func updateNSView(_ nsView: WKWebView, context: Context) {
-
     guard context.coordinator.loadedUrl != data.url else { return }
     context.coordinator.loadedUrl = data.url
 
     if let url = data.url {
       DispatchQueue.main.async {
         let request = URLRequest(url: url)
-        nsView.load(request)
+        DispatchQueue.main.async {
+          nsView.load(request)
+        }
       }
     }
-    context.coordinator.data.url = data.url
   }
 
   func makeCoordinator() -> WebViewCoordinator {
@@ -65,12 +60,22 @@ class WebViewCoordinator: NSObject, WKNavigationDelegate {
 
   func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
 
-    let js = """
-              document.querySelector(".wrapper-1_HaEi").style.display = 'none';
-              document.querySelector(".sidebar-1tnWFu").style.display = 'none';
-             """
-
-    webView.evaluateJavaScript(js, completionHandler: nil)
+//    webView.wantsLayer = true
+//    webView.layer?.backgroundColor = NSColor.clear.cgColor
+//    
+//    webView.underPageBackgroundColor = NSColor.clear
+//    webView.enclosingScrollView?.backgroundColor = NSColor.clear
+//
+//    self.webView.underPageBackgroundColor = NSColor.clear
+//    self.webView.enclosingScrollView?.backgroundColor = NSColor.clear
+    
+//    let js = """
+//              document.querySelector('nav').style.backgroundColor = 'hsla(0, 0%, 0%, 0.0)'
+//              document.querySelector('body').style.backgroundColor = 'hsla(0, 0%, 0%, 0.0)'
+//              document.querySelector('html').style.backgroundColor = 'hsla(0, 0%, 0%, 0.0)'
+//             """
+//
+//    webView.evaluateJavaScript(js, completionHandler: nil)
 
     DispatchQueue.main.async {
       self.data.loading = false

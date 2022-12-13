@@ -1,77 +1,36 @@
-//
 //  ContentView.swift
-//  Blabber
-//
-//  Created by Timothy Kaechle on 5/12/22.
-//
+//  Created by Tim Kaechle on 12/12/22.
 
 import SwiftUI
 import WebKit
 
+//@available(macOS 13.0, *)
+//struct ContentView: View {
+//  var home: URL? = URL(string: "https://linear.app/madebythebeach/team/WRITE/active")
+//  var body: some View {
+//    ViewThatFits {
+//      Text("What the fuck")
+//    }
+//    //    WebView(data: WebViewData(url: self.home!))
+//  }
+//}
+
 struct ContentView: View {
+  var home: URL? = URL(string: "https://linear.app/madebythebeach/team/WRITE/active")
   var body: some View {
-    NavigationView{
-      VStack{
-        NavigationList()
-      }
-      VStack{
-        MainPanel()
-      }
+    VStack {
+      Text("Blabber").padding(.top, 2).ignoresSafeArea()
+      WebView(data: WebViewData(url: self.home!))
+        .ignoresSafeArea()
     }
-  }
-}
-
-struct NavigationList: View {
-  var home: URL? = URL(string: "https://slack.com/workspace-signin")
-
-  var hardwareWordle: String = """
-                               document.querySelector(".mainContent-20q_Hp").click();
-                               """
-
-  var body: some View {
-    List {
-      Section(header: Text("the og").font(Font.system(.body).smallCaps())) {
-        Label("hardware", systemImage: "number")
-        Label("wholesome", systemImage: "number")
-        Label("newsinfotainment", systemImage: "number")
-        Label("selfies-n-stuff", systemImage: "number")
-        Label("dabbin-til-dawn", systemImage: "number")
-        Label("música", systemImage: "number")
-      }
-      Section(header: Text("extra mayo").font(Font.system(.body).smallCaps())) {
-        NavigationLink(destination: WebView(data: WebViewData(url: home!))) {
-          Label("wordle", systemImage: "number")
-        }
-
-        Label("stonks", systemImage: "number")
-        Label("kryptonight", systemImage: "number")
-        Label("shitposting", systemImage: "number")
-      }
-      Section(header: Text("entrilo").font(Font.system(.body).smallCaps())) {
-        Label("ravecave", systemImage: "speaker.wave.3")
-        Label("gamecave", systemImage: "speaker.wave.3")
-        Label("exchange-support", systemImage: "speaker.wave.3")
-      }
-    }.frame(width: 150)
-  }
-}
-
-
-// Web View
-
-struct MainPanel: View {
-  var home: URL? = URL(string: "https://slack.com/workspace-signin")
-  var body: some View {
-    WebView(data: WebViewData(url: self.home!))
-  }
-}
-
-// Preview Provider
-
-struct CircleImage_Previews: PreviewProvider {
-  static var previews: some View {
-    Group {
-      ContentView()
-    }
+    .frame(
+      minWidth: 100,
+      idealWidth: 800,
+      maxWidth: nil,
+      minHeight: 300,
+      idealHeight: 600,
+      maxHeight: nil,
+      alignment: .center)
+    .ignoresSafeArea()
   }
 }

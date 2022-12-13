@@ -2,7 +2,7 @@
 //  BlabberTests.swift
 //  BlabberTests
 //
-//  Created by Timothy Kaechle on 5/12/22.
+//  Created by Tim Kaechle on 5/12/22.
 //
 
 import XCTest
