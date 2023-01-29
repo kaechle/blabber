@@ -1,27 +1,16 @@
-//  ContentView.swift
-//  Created by Tim Kaechle on 12/12/22.
+//  ContentView.swift, created by Tim Kaechle on 5/12/22.
 
 import SwiftUI
 import WebKit
 
-//@available(macOS 13.0, *)
-//struct ContentView: View {
-//  var home: URL? = URL(string: "https://linear.app/madebythebeach/team/WRITE/active")
-//  var body: some View {
-//    ViewThatFits {
-//      Text("What the fuck")
-//    }
-//    //    WebView(data: WebViewData(url: self.home!))
-//  }
-//}
-
 struct ContentView: View {
-  var home: URL? = URL(string: "https://linear.app/madebythebeach/team/WRITE/active")
+  var home: URL? = URL(string: "https://discord.com/channels/@me")
   var body: some View {
     VStack {
-      Text("Blabber").padding(.top, 2).ignoresSafeArea()
       WebView(data: WebViewData(url: self.home!))
-        .ignoresSafeArea()
+    }
+    .toolbar {
+
     }
     .frame(
       minWidth: 100,
@@ -31,6 +20,5 @@ struct ContentView: View {
       idealHeight: 600,
       maxHeight: nil,
       alignment: .center)
-    .ignoresSafeArea()
   }
 }

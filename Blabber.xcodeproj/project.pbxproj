@@ -3,49 +3,45 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7C105CB828CCCC34001BF39A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C105CB728CCCC34001BF39A /* ContentView.swift */; };
+		7C81192129505299007A9FE4 /* Pods_Blabber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C36690B6A3A52EAC0F4CA4 /* Pods_Blabber.framework */; };
+		7C81192229505299007A9FE4 /* Pods_Blabber.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 40C36690B6A3A52EAC0F4CA4 /* Pods_Blabber.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7CD1C3B829504C53008A7D50 /* Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1C3B729504C53008A7D50 /* Toolbar.swift */; };
 		7CF7B642282D51890003632C /* BlabberApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7B641282D51890003632C /* BlabberApp.swift */; };
 		7CF7B646282D518A0003632C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CF7B645282D518A0003632C /* Assets.xcassets */; };
-		7CF7B649282D518A0003632C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CF7B648282D518A0003632C /* Preview Assets.xcassets */; };
-		7CF7B654282D518B0003632C /* BlabberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7B653282D518B0003632C /* BlabberTests.swift */; };
-		7CF7B65E282D518B0003632C /* BlabberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7B65D282D518B0003632C /* BlabberUITests.swift */; };
-		7CF7B660282D518B0003632C /* BlabberUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7B65F282D518B0003632C /* BlabberUITestsLaunchTests.swift */; };
 		7CF7B66D282D51A70003632C /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7B66C282D51A70003632C /* WebView.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		7CF7B650282D518B0003632C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7CF7B636282D51890003632C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7CF7B63D282D51890003632C;
-			remoteInfo = Blabber;
+/* Begin PBXCopyFilesBuildPhase section */
+		7C81192329505299007A9FE4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7C81192229505299007A9FE4 /* Pods_Blabber.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7CF7B65A282D518B0003632C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7CF7B636282D51890003632C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7CF7B63D282D51890003632C;
-			remoteInfo = Blabber;
-		};
-/* End PBXContainerItemProxy section */
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		02BF95B27A6605D1C7F01174 /* Pods-Blabber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blabber.debug.xcconfig"; path = "Target Support Files/Pods-Blabber/Pods-Blabber.debug.xcconfig"; sourceTree = "<group>"; };
+		40C36690B6A3A52EAC0F4CA4 /* Pods_Blabber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blabber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40CB054DB920B30E545812B1 /* Pods_BlabberTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlabberTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68BC197507DB0D6C3EC3D138 /* Pods-Blabber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blabber.release.xcconfig"; path = "Target Support Files/Pods-Blabber/Pods-Blabber.release.xcconfig"; sourceTree = "<group>"; };
+		6D193D2EF95055BAB6D16661 /* Pods_Blabber_BlabberUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blabber_BlabberUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C105CB728CCCC34001BF39A /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		7CF7B63E282D51890003632C /* Blabber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blabber.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C81192429505345007A9FE4 /* Blabber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Blabber.app; path = /Users/kaechle/Developer/Blabber/build/Debug/Blabber.app; sourceTree = "<absolute>"; };
+		7CD1C3B729504C53008A7D50 /* Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toolbar.swift; sourceTree = "<group>"; };
 		7CF7B641282D51890003632C /* BlabberApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlabberApp.swift; sourceTree = "<group>"; };
 		7CF7B645282D518A0003632C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7CF7B648282D518A0003632C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7CF7B64A282D518A0003632C /* Blabber.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Blabber.entitlements; sourceTree = "<group>"; };
-		7CF7B64F282D518B0003632C /* BlabberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlabberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7CF7B653282D518B0003632C /* BlabberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlabberTests.swift; sourceTree = "<group>"; };
-		7CF7B659282D518B0003632C /* BlabberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlabberUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7CF7B65D282D518B0003632C /* BlabberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlabberUITests.swift; sourceTree = "<group>"; };
-		7CF7B65F282D518B0003632C /* BlabberUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlabberUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7CF7B66C282D51A70003632C /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,20 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7CF7B64C282D518B0003632C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7CF7B656282D518B0003632C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				7C81192129505299007A9FE4 /* Pods_Blabber.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,20 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				7CF7B640282D51890003632C /* Blabber */,
-				7CF7B652282D518B0003632C /* BlabberTests */,
-				7CF7B65C282D518B0003632C /* BlabberUITests */,
-				7CF7B63F282D51890003632C /* Products */,
+				A674F612BC6CEA6C1D2D7AAD /* Pods */,
+				D7CC51A6F523590A9CC83B45 /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		7CF7B63F282D51890003632C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7CF7B63E282D51890003632C /* Blabber.app */,
-				7CF7B64F282D518B0003632C /* BlabberTests.xctest */,
-				7CF7B659282D518B0003632C /* BlabberUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		7CF7B640282D51890003632C /* Blabber */ = {
@@ -100,36 +72,30 @@
 				7CF7B641282D51890003632C /* BlabberApp.swift */,
 				7CF7B66C282D51A70003632C /* WebView.swift */,
 				7C105CB728CCCC34001BF39A /* ContentView.swift */,
+				7CD1C3B729504C53008A7D50 /* Toolbar.swift */,
 				7CF7B645282D518A0003632C /* Assets.xcassets */,
 				7CF7B64A282D518A0003632C /* Blabber.entitlements */,
-				7CF7B647282D518A0003632C /* Preview Content */,
 			);
 			path = Blabber;
 			sourceTree = "<group>";
 		};
-		7CF7B647282D518A0003632C /* Preview Content */ = {
+		A674F612BC6CEA6C1D2D7AAD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7CF7B648282D518A0003632C /* Preview Assets.xcassets */,
+				02BF95B27A6605D1C7F01174 /* Pods-Blabber.debug.xcconfig */,
+				68BC197507DB0D6C3EC3D138 /* Pods-Blabber.release.xcconfig */,
 			);
-			path = "Preview Content";
+			path = Pods;
 			sourceTree = "<group>";
 		};
-		7CF7B652282D518B0003632C /* BlabberTests */ = {
+		D7CC51A6F523590A9CC83B45 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7CF7B653282D518B0003632C /* BlabberTests.swift */,
+				40C36690B6A3A52EAC0F4CA4 /* Pods_Blabber.framework */,
+				6D193D2EF95055BAB6D16661 /* Pods_Blabber_BlabberUITests.framework */,
+				40CB054DB920B30E545812B1 /* Pods_BlabberTests.framework */,
 			);
-			path = BlabberTests;
-			sourceTree = "<group>";
-		};
-		7CF7B65C282D518B0003632C /* BlabberUITests */ = {
-			isa = PBXGroup;
-			children = (
-				7CF7B65D282D518B0003632C /* BlabberUITests.swift */,
-				7CF7B65F282D518B0003632C /* BlabberUITestsLaunchTests.swift */,
-			);
-			path = BlabberUITests;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,9 +105,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CF7B663282D518B0003632C /* Build configuration list for PBXNativeTarget "Blabber" */;
 			buildPhases = (
+				D4688790BE29B26F72AC68D1 /* [CP] Check Pods Manifest.lock */,
 				7CF7B63A282D51890003632C /* Sources */,
 				7CF7B63B282D51890003632C /* Frameworks */,
 				7CF7B63C282D51890003632C /* Resources */,
+				B5CAD6199EF674115589D250 /* [CP] Embed Pods Frameworks */,
+				7C81192329505299007A9FE4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,44 +118,8 @@
 			);
 			name = Blabber;
 			productName = Blabber;
-			productReference = 7CF7B63E282D51890003632C /* Blabber.app */;
+			productReference = 7C81192429505345007A9FE4 /* Blabber.app */;
 			productType = "com.apple.product-type.application";
-		};
-		7CF7B64E282D518B0003632C /* BlabberTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7CF7B666282D518B0003632C /* Build configuration list for PBXNativeTarget "BlabberTests" */;
-			buildPhases = (
-				7CF7B64B282D518B0003632C /* Sources */,
-				7CF7B64C282D518B0003632C /* Frameworks */,
-				7CF7B64D282D518B0003632C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7CF7B651282D518B0003632C /* PBXTargetDependency */,
-			);
-			name = BlabberTests;
-			productName = BlabberTests;
-			productReference = 7CF7B64F282D518B0003632C /* BlabberTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		7CF7B658282D518B0003632C /* BlabberUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7CF7B669282D518B0003632C /* Build configuration list for PBXNativeTarget "BlabberUITests" */;
-			buildPhases = (
-				7CF7B655282D518B0003632C /* Sources */,
-				7CF7B656282D518B0003632C /* Frameworks */,
-				7CF7B657282D518B0003632C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7CF7B65B282D518B0003632C /* PBXTargetDependency */,
-			);
-			name = BlabberUITests;
-			productName = BlabberUITests;
-			productReference = 7CF7B659282D518B0003632C /* BlabberUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -201,18 +134,10 @@
 					7CF7B63D282D51890003632C = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
-					7CF7B64E282D518B0003632C = {
-						CreatedOnToolsVersion = 13.3.1;
-						TestTargetID = 7CF7B63D282D51890003632C;
-					};
-					7CF7B658282D518B0003632C = {
-						CreatedOnToolsVersion = 13.3.1;
-						TestTargetID = 7CF7B63D282D51890003632C;
-					};
 				};
 			};
 			buildConfigurationList = 7CF7B639282D51890003632C /* Build configuration list for PBXProject "Blabber" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -220,13 +145,11 @@
 				Base,
 			);
 			mainGroup = 7CF7B635282D51890003632C;
-			productRefGroup = 7CF7B63F282D51890003632C /* Products */;
+			productRefGroup = 7CF7B635282D51890003632C;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				7CF7B63D282D51890003632C /* Blabber */,
-				7CF7B64E282D518B0003632C /* BlabberTests */,
-				7CF7B658282D518B0003632C /* BlabberUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -236,26 +159,53 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CF7B649282D518A0003632C /* Preview Assets.xcassets in Resources */,
 				7CF7B646282D518A0003632C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7CF7B64D282D518B0003632C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7CF7B657282D518B0003632C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B5CAD6199EF674115589D250 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Blabber/Pods-Blabber-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Blabber/Pods-Blabber-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Blabber/Pods-Blabber-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4688790BE29B26F72AC68D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Blabber-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7CF7B63A282D51890003632C /* Sources */ = {
@@ -265,40 +215,11 @@
 				7CF7B66D282D51A70003632C /* WebView.swift in Sources */,
 				7CF7B642282D51890003632C /* BlabberApp.swift in Sources */,
 				7C105CB828CCCC34001BF39A /* ContentView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7CF7B64B282D518B0003632C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7CF7B654282D518B0003632C /* BlabberTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7CF7B655282D518B0003632C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7CF7B65E282D518B0003632C /* BlabberUITests.swift in Sources */,
-				7CF7B660282D518B0003632C /* BlabberUITestsLaunchTests.swift in Sources */,
+				7CD1C3B829504C53008A7D50 /* Toolbar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		7CF7B651282D518B0003632C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7CF7B63D282D51890003632C /* Blabber */;
-			targetProxy = 7CF7B650282D518B0003632C /* PBXContainerItemProxy */;
-		};
-		7CF7B65B282D518B0003632C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7CF7B63D282D51890003632C /* Blabber */;
-			targetProxy = 7CF7B65A282D518B0003632C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		7CF7B661282D518B0003632C /* Debug */ = {
@@ -352,7 +273,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -407,7 +328,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -418,25 +339,30 @@
 		};
 		7CF7B664282D518B0003632C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02BF95B27A6605D1C7F01174 /* Pods-Blabber.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Blabber/Blabber.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Blabber/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = Blabber/Assets.xcassets;
 				DEVELOPMENT_TEAM = 82C89Q2K4T;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Blabber;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.timothykaechle.Blabber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -447,106 +373,35 @@
 		};
 		7CF7B665282D518B0003632C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68BC197507DB0D6C3EC3D138 /* Pods-Blabber.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Blabber/Blabber.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Blabber/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = Blabber/Assets.xcassets;
 				DEVELOPMENT_TEAM = 82C89Q2K4T;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Blabber;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.timothykaechle.Blabber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		7CF7B667282D518B0003632C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 82C89Q2K4T;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.timothykaechle.BlabberTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blabber.app/Contents/MacOS/Blabber";
-			};
-			name = Debug;
-		};
-		7CF7B668282D518B0003632C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 82C89Q2K4T;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.timothykaechle.BlabberTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blabber.app/Contents/MacOS/Blabber";
-			};
-			name = Release;
-		};
-		7CF7B66A282D518B0003632C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 82C89Q2K4T;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.timothykaechle.BlabberUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = Blabber;
-			};
-			name = Debug;
-		};
-		7CF7B66B282D518B0003632C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 82C89Q2K4T;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.timothykaechle.BlabberUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = Blabber;
 			};
 			name = Release;
 		};
@@ -567,24 +422,6 @@
 			buildConfigurations = (
 				7CF7B664282D518B0003632C /* Debug */,
 				7CF7B665282D518B0003632C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7CF7B666282D518B0003632C /* Build configuration list for PBXNativeTarget "BlabberTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7CF7B667282D518B0003632C /* Debug */,
-				7CF7B668282D518B0003632C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7CF7B669282D518B0003632C /* Build configuration list for PBXNativeTarget "BlabberUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7CF7B66A282D518B0003632C /* Debug */,
-				7CF7B66B282D518B0003632C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

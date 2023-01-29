@@ -1,14 +1,13 @@
-// WebView.swift
-// Created by Tim Kaechle on 5/12/22.
+//  WebView.swift, created by Tim Kaechle on 5/12/22.
 
 import SwiftUI
 import WebKit
 import Combine
+import SwiftSoup
 
 class WebViewData: ObservableObject {
   @Published var loading: Bool = false
   @Published var url: URL?
-
   init (url: URL) {
     self.url = url
   }
@@ -16,7 +15,6 @@ class WebViewData: ObservableObject {
 
 struct WebView: NSViewRepresentable {
   @ObservedObject var data: WebViewData
-
   var webView: WKWebView = WKWebView()
 
   func makeNSView(context: Context) -> WKWebView {
@@ -44,9 +42,7 @@ struct WebView: NSViewRepresentable {
 
 @available(OSX 11.0, *)
 class WebViewCoordinator: NSObject, WKNavigationDelegate {
-  
   @ObservedObject var data: WebViewData
-
   var webView: WKWebView = WKWebView()
   var loadedUrl: URL? = nil
   var loadedNav: String? = nil
@@ -59,31 +55,15 @@ class WebViewCoordinator: NSObject, WKNavigationDelegate {
   }
 
   func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-
-//    webView.wantsLayer = true
-//    webView.layer?.backgroundColor = NSColor.clear.cgColor
-//    
-//    webView.underPageBackgroundColor = NSColor.clear
-//    webView.enclosingScrollView?.backgroundColor = NSColor.clear
-//
-//    self.webView.underPageBackgroundColor = NSColor.clear
-//    self.webView.enclosingScrollView?.backgroundColor = NSColor.clear
-    
-//    let js = """
-//              document.querySelector('nav').style.backgroundColor = 'hsla(0, 0%, 0%, 0.0)'
-//              document.querySelector('body').style.backgroundColor = 'hsla(0, 0%, 0%, 0.0)'
-//              document.querySelector('html').style.backgroundColor = 'hsla(0, 0%, 0%, 0.0)'
-//             """
-//
-//    webView.evaluateJavaScript(js, completionHandler: nil)
-
-    DispatchQueue.main.async {
-      self.data.loading = false
-    }
-
+    let serverBrowserPadding: String =  """
+                                        document.querySelector('nav').style.paddingTop = '20px'
+                                        """
+    webView.evaluateJavaScript(serverBrowserPadding, completionHandler: nil)
+    DispatchQueue.main.async { self.data.loading = false }
   }
 
   func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+
     DispatchQueue.main.async { self.data.loading = true }
   }
 
@@ -105,7 +85,6 @@ class WebViewCoordinator: NSObject, WKNavigationDelegate {
     alert.messageText = title
     alert.informativeText = message
     alert.alertStyle = .warning
-
     alert.runModal()
 #else
     print("\(title): \(message)")
